@@ -1,5 +1,5 @@
 <section>
-      VmInclude:__BASE__/vmiis/Common-Code/grid/grid.html
+      VmInclude:__PARTS__/grid/grid.html
 </section>
 <script>
     function F__ID(){
@@ -7,7 +7,7 @@
         _fields="_Form,Record_ID,Study_ID,Screening_Number,Clinic_of_Origin,Randomisation_Number,Randomised_by,Initials,Gender,DOB,_Data_Entry,_Setup,_Quest,_Login_ID,_Password";
         _fields+=",Submit Date|DateTime,Submitted by|Author,_Delete";
         //-------------------------------------
-        VmInclude:__BASE__/vmiis/Common-Code/grid/grid.js
+        VmInclude:__PARTS__/grid/grid.js
         VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
         //-------------------------------------
         $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
