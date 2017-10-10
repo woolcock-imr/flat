@@ -1,0 +1,40 @@
+<section>
+VmInclude:__BASE__/vmiis/Common-Code/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        //------------------------
+        _fields='Record_ID,Study_ID,Screening_Number,Clinic_of_Origin,Randomisation_Number,Tx,Initials,Gender,DOB'
+        //------------------------
+        var participant_pid=$vm.module_list[_app_id+'randomisation_sleep'].var.participant_tid;
+        //-------------------------------------
+        $('#D__ID').on('load',function(){    _set_req(); _request_data(); })
+        $('#D__ID').on('back',function(){    _set_req(); _request_data(); })
+        //-------------------------------------
+        var _set_req=function(){
+            $('#new__ID').hide();$('#save__ID').hide();
+            //-------------------
+            var sql="with tb as (select Tx=S1,RN=V1 from [TABLE-"+_db_pid+"]) ";
+            sql+="select Information,Tx,Record_ID=UID,ID from [TABLE-"+participant_pid+"] join tb on RN=V1 ";
+            //-------------------
+            _req={cmd:'query_records',sql:sql}
+        }
+        _cell_render=function(records,I,field,td,set_value,source){
+            switch(field){
+            }
+        }
+
+    }
+</script>
+<style>
+    VmInclude:__BASE__/vmiis/Common-Code/grid/grid.css
+    .ui-autocomplete {
+         z-index: 9999 !important;
+    }
+    .ui-menu-item:hover{
+        color:red;
+        font-weight: 200;
+    }
+</style>

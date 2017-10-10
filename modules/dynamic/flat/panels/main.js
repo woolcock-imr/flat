@@ -44,8 +44,8 @@ var main__ID=function(){
     L[A+'randomisation_sleep_import']=       {table_id:'20010891',var:v,url:T+'/randomisation_sleep_import.html'};
     L[A+'randomisation_obesity']=       {table_id:'20010892',var:v,url:T+'/randomisation_obesity.html'};
     L[A+'randomisation_obesity_import']=       {table_id:'20010892',var:v,url:T+'/randomisation_obesity_import.html'};
-    L[A+'randomised_sleep_query']=       {table_id:'20010891',var:v,url:B+'/query/randomised_sleep_query.html'};
-    L[A+'randomised_obesity_query']=       {table_id:'20010892',var:v,url:B+'/query/randomised_obesity_query.html'};
+    L[A+'randomised_sleep_query']=       {table_id:'20010891',var:v,url:B+'/flat/query/randomised_sleep_query.html'};
+    L[A+'randomised_obesity_query']=       {table_id:'20010892',var:v,url:B+'/flat/query/randomised_obesity_query.html'};
     //---------------------------------------------
     L[A+'Adverse_Event']=       {table_id:'20009731',var:v,url:T+'/adverse_event.html',notes:'Adverse Event'};
     L[A+'Concom_Medication']=   {table_id:'20009732',var:v,url:T+'/concom_medication.html',notes:'Concomitant Medication'};
@@ -188,7 +188,7 @@ var main__ID=function(){
           A+'Month_9_IPAQ',
           A+'Month_9_FOSQ',
         ],
-        "Month 9":[
+        "Month 12":[
           A+'Month_12_ESS',
           A+'Month_12_SF36',
           A+'Month_12_FOSQ',
